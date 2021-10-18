@@ -1,0 +1,120 @@
+.user-menu {
+  padding: 7px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.1s;
+  position: relative;
+}
+
+.user-menu__bell {
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-menu__dropdown {
+  position: absolute;
+  top: 110px;
+  right: -30px;
+  width: 400px;
+  min-height: 60px;
+  background-color: #e6e6e6;
+  padding: 8px 7px 5px;
+  font-size: 22px;
+  line-height: 26px;
+  border: #000 solid 2px;
+}
+
+.user-menu__square {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #f00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #000 solid 2px;
+}
+
+.user-menu__dropdown-little-arrow {
+  position: absolute;
+  top: 75px;
+  right: 20px;
+
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 37px solid #000;
+  z-index: 1;
+}
+
+.user-menu__dropdown-little-arrow::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 21px solid transparent;
+  border-right: 21px solid transparent;
+  border-bottom: 35px solid #e6e6e6;
+  position: absolute;
+  top: 0px;
+  left: -21px;
+}
+
+.user-menu__dropdown_item {
+  padding: 4px 0 4px 2px;
+  margin: 16px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.user-menu__dropdown_item p {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.user-menu__dropdown_all {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.user-menu__dropdown_item:hover {
+  background-color: #fff;
+}
+
+/* MOBILE */
+@media all and (max-width: 1200px) {
+  .user-menu {
+    padding: 7px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: 0.1s;
+    position: relative;
+    width: 100%;
+  }
+
+  .user-menu__dropdown {
+    margin-top: 10px;
+    position: static;
+    right: 0px;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .user-menu__bell {
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
